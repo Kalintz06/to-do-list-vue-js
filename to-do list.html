@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="to-do list.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="to-do list.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1>Ma to-do list</h1>
+      <input type="text" class="liste" placeholder="ajout a la liste" @input="modifierTache" />
+      <div button="bouton">
+        <button @click="ajouterTache">ajouter</button>
+      <div class="tab">
+        <table>
+            <div class="A-faire">
+              <ul>
+                a Faire
+                  <li v-for="element in liste">{{element}}</li>
+                  <button @click="switchList" data-index>en cours</button>
+              </ul>
+            </div>
+            <div class="En-cours"> 
+              <ul>
+                En Cours
+                  <li v-for="element in liste">{{element}}</li>
+                  <button @click="addList">ajouter</button>
+              </ul>
+            </div>
+            <div class="Terminée">
+              <ul>
+                terminée
+                  <li v-for="element in liste">{{element}}</li>
+                  <button @click="addList">ajouter</button>
+              </ul>
+            </div>
+            </tr>
+          </th>
+      </div>
+    </div>
+  </body>
+</html>
